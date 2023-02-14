@@ -54,7 +54,7 @@ global.author = 'DabiBot-MD'
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-global.fgig = 'https://github.com/Antonio32114/Dabi-bot'
+global.fgig = 'https://github.com/Antonio32114/Dabi-Bot'
  
 global.yt = 'https://youtube.com/@Itachi_bot'
 
