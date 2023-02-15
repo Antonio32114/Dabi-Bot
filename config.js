@@ -80,7 +80,7 @@ global.maxwarn = '4' // máxima advertencias
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 global.wm = '🄳🄰🄱🄸-🄱🄾🅃'
-global.wait = '*⌛ _Cargando..._*\n*▰▰▰▱▱▱▱▱*'
+global.wait = '*_Cargando..._*\n*▰▰▰▱▱▱▱▱*'
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
