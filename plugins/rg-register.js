@@ -47,9 +47,9 @@ let handler = async function (m, { text, usedPrefix, command }) {
 ]
 
 const listMessage = {
-  text: `┆Por favor selecciona tu edad pulsando el boton...\n┆Tu nombre: ${conn.getName(m.sender)}\n┆Quieres poner otro mombre?\n┆Escribe *${usedPrefix + command} Nombre.Años*\n╰──────•◈•───────╯`,
+  text: `├Por favor selecciona tu edad pulsando el boton...\n├Tu nombre: ${conn.getName(m.sender)}\n├Quieres poner otro mombre?\n├Escribe *${usedPrefix + command} Nombre.Años*\n╰ׄ┄ׅׄ─ׅׄ┄ׅׄ─ׂׅ┄ׅׄ─ׂׅ┄ׅׄ─ׅׄ┄ׅׄ─ׂׅ┄ׅׄ─ׂׅ┄ׅׄ─ׅׄ─ׂׅ┄ׅׄ─ׂ╯`,
   footer: global.wm,
-  title: "╭──────• REGISTRO •──────╮",
+  title: "╭╾─𖧹֥ꕥ⿴⃟͜᷼᎒⃟❒༘༾REGISTRO⿴⃟͜᷼᎒⃟❒༘ꕥ̤֭᪳𖧹─╼╮",
   buttonText: "Pulsa Aqui!",
   sections
 }
@@ -72,19 +72,20 @@ const listMessage = {
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.fromMe ? conn.user.jid : m.sender
 global.db.data.users[m.sender].limit += 5
 global.db.data.users[m.sender].exp += 400
-  let caption = `╭──────• *REGISTRADO* •──────╮
-┆ *NOMBRE* 
-┆ ${name}
-┆——————«•»——————
-┆ *EDAD* 
-┆ ${age} Años
-┆——————«•»——————
-┆  *BONO* 
-┆ *$400 XP*
-┆ *$5 DIAMANTES*
-╰──────•◈•───────╯`
+  let caption = `╭╾─𖧹֥ꕥ⿴⃟͜᷼᎒⃟❒༘༾🔥༿⿴⃟͜᷼᎒⃟❒༘ꕥ̤֭᪳𖧹─╼╮
+├🔥⃟⃪ᩙᤢᮬ⃪⃫᮪✑ *᳆⃟⋆REGISTRADO-᳆͜͡➣*
+┝╾─𖧹֥ꕥ⿴⃟͜᷼᎒⃟❒༘༾🜲༿⿴⃟͜᷼᎒⃟❒༘ꕥ̤֭᪳𖧹─╼
+├*NOMBRE* 
+├ ${name}
+┝╾─𖧹֥ꕥ⿴⃟͜᷼᎒⃟❒༘༾🜲༿⿴⃟͜᷼᎒⃟❒༘ꕥ̤֭᪳𖧹─╼
+├ *EDAD* 
+├ ${age} Años
+┝╾─𖧹֥ꕥ⿴⃟͜᷼᎒⃟❒༘༾🜲༿⿴⃟͜᷼᎒⃟❒༘ꕥ̤֭᪳𖧹─╼
+├ Numero del serie 
+├ ${sn}
+╰ׄ┄ׅׄ─ׅׄ┄ׅׄ─ׂׅ┄ׅׄ─ׂׅ┄ׅׄ─ׅׄ┄ׅׄ─ׂׅ┄ׅׄ─ׂׅ┄ׅׄ─ׅׄ─ׂׅ┄ׅׄ─ׂ╯`
 //let author = global.author
-await conn.sendButton(m.chat, caption, `𝙏𝙐 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙎𝙀𝙍𝙄𝙀 𝙏𝙀 𝙎𝙀𝙍𝙑𝙄𝙍𝘼 𝙀𝙉 𝘾𝘼𝙎𝙊 𝙌𝙐𝙀 𝙌𝙐𝙄𝙀𝙍𝘼 𝘽𝙊𝙍𝙍𝘼𝙍 𝙎𝙐 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝙊\n𝙀𝙅𝙀𝙈𝙋𝙇𝙊\n${usedPrefix}unreg numero de serie\n${wm}`, [['𝘼𝙝𝙤𝙧𝙖 𝙚𝙨𝙩𝙤𝙮 𝙑𝙚𝙧𝙞𝙛𝙞𝙘𝙖𝙙𝙤(𝙖)!! ✅', '/profile']], m)
+await conn.sendButton(m.chat, caption, `El numero de serie te servira en caso de borrar sus registros\n${usedPrefix}unreg numero de serie\n${wm}`, [['VERIFICADO(A)!!', '/profile']], m)
 await m.reply(`${sn}`) 
 }
 handler.help = ['daftar', 'register'].map(v => v + ' <nama>.<umur>')
