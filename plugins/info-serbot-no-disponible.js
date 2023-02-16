@@ -16,7 +16,7 @@ conn.reply(m.chat, text, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
 title: '.',
 body: 'Super Bot WhatsApp',         
-previewType: 1, thumbnail: fs.readFileSync("./media/Menu1.jpg"),
+previewType: 1, thumbnail: fs.readFileSync("./media/menu1.jpg"),
 sourceUrl: `${yt}`}}})  
   
   let info = `*Ya que no esta disponible el #serbot, Ahora podrás unir el Número de este Bot a tú Grupo de manera Temporal usando el comando*\n*#join*
