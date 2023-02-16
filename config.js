@@ -68,9 +68,9 @@ global.vs = '1.5.0'
 global.lb = '🄳🄰🄱🄸-🄱🄾🅃'
 global.lolibot = lb
 
-global.dygp = 'https://chat.whatsapp.com/IPVY6iyG1DBHexyOqZPsts' //grupo del bot
+global.dygp = 'https://chat.whatsapp.com/HZmxLIsZRbYE37xRV9XQYU' //grupo del bot
 
-global.nna = 'https://chat.whatsapp.com/JESaesjOEcB6wnGX0QYT9o' //UPDATE
+global.nna = 'https://chat.whatsapp.com/HZmxLIsZRbYE37xRV9XQYU' //UPDATE
 
 global.fglog = 'https://telegra.ph/file/1861aab98389b13db8588.png' 
 
