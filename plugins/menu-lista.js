@@ -61,7 +61,7 @@ text: `~ HOLA ${taguser}*`, footer: `
 ┆□ 💎 ᴅɪᴀᴍᴀɴᴛᴇs: ${diamond}
 ┆□ 🧰 ᴇxᴘᴇʀɪᴇɴᴄɪᴀ: ${exp}
 └────ׂ─ׂ─ׂ─ׂ─────
-*ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ ✨*`, pp,
+*🄳🄰🄱🄸-🄱🄾🅃✨*`, pp,
 title: null,
 buttonText: "🅗🅐🅖🅐 🅒🅛🅘🅒🅚 🅐🅠🅤🅘", 
 sections }
