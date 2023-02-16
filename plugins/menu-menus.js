@@ -2,7 +2,8 @@ let handler = async(m, {conn }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let mentionedJid = [who]
 let username = conn.getName(who)
-let user = global.db.data.users[m.sender]                                                        
+let user = global.db.data.users[m.sender]    
+m.react('💫')                                                    
 let txt = `╭─╮︹︹︹⊹︹︹︹⊹︹︹︹⊹
 ┆🔥⃟⃪ᩙᤢᮬ⃪⃫᮪✑𝐇𝐎𝐋𝐀 ${username}
 ┆*ꔷ㆒⸼݇҉ֻ᠂⃟☕ Bienvenido/a'꩖͜͡⚘࿆ํꪶ*
