@@ -3,7 +3,8 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let mentionedJid = [who]
 let username = conn.getName(who)
 let user = global.db.data.users[m.sender]    
-m.react('💫')                                                    
+m.react('💫')    
+m.reply ('𓌝𓂅⸙͎❒︴Cᴀʀɢᴀɴᴅᴏ% ╰─➣𝐀𝐠𝐮𝐚𝐫𝐝𝐞 𝐮𝐧 𝙢𝙤𝙢𝙚𝙣𝙩𝙤 ⸙͎༉⁹⁹⁹')                                                
 let txt = `╭─╮︹︹︹⊹︹︹︹⊹︹︹︹⊹
 ┆🔥⃟⃪ᩙᤢᮬ⃪⃫᮪✑𝐇𝐎𝐋𝐀 ${username}
 ┆*ꔷ㆒⸼݇҉ֻ᠂⃟☕ Bienvenido/a'꩖͜͡⚘࿆ํꪶ*
