@@ -26,16 +26,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/elrebelde21/NovaBot-MD",
+    "homepage": "https://github.com/Antonio32114/Dabi-Bot",
     "author": {
-        "name": "elrebelde21"
+        "name": "Antonio32114"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/elrebelde21/NovaBot-MD.git"
+        "url": "git+https://github.com/Antonio32114/Dabi-Bot"
     },
     "bugs": {
-        "url": "https://github.com/elrebelde21/NovaBot-MD/issues"
+        "url": "https://github.com/Antonio32114/Dabi-Bot/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
