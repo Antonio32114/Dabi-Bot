@@ -27,8 +27,7 @@ const sections = [
 {
 title: `🄳🄰🄱🄸-🄱🄾🅃 ✨ sᴇʟᴇᴄᴄɪᴏɴᴇs ᴀǫᴜɪ`,
 rows: [
-       {title: "ɪɴғᴏ", description: "ᴘᴀʀᴀ ᴠᴇᴢ ᴇʟ ᴄᴜᴀɴᴛᴏs ɢʀᴜᴘᴏs ᴇsᴛᴀ ᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}grouplist`},
-        {title: "ᴄʀᴇᴀᴅᴏʀ", description: "ɴᴜᴍᴇʀᴏ ᴅᴇʟ ᴄʀᴇᴀᴅᴏʀ", rowId: `${usedPrefix}owner`},
+        {title: "👑 𝗖𝗥𝗘𝗔𝗗𝗢𝗥 👑", description: '𝗖𝗢𝗡𝗧𝗔𝗖𝗧𝗢 𝗗𝗘𝗟 𝗖𝗥𝗘𝗔𝗗𝗢𝗥', rowId: `${usedPrefix}creador`},
         {title: "ᴍᴇɴᴜᴄᴏᴍᴘʟᴇᴛᴏ", description: "ᴘᴀʀᴀ ᴠᴇᴢ ᴛᴏᴅᴀ ʟᴀs ғᴜɴᴄɪᴏɴᴇs ᴅᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}menucompleto`},
       {title: "ᴇsᴛᴀᴅᴏ", description: "ᴘᴀʀᴀ sᴀʙᴇʀ sɪ ᴇʟ ʙᴏᴛ ᴇsᴛᴀ ᴀᴄᴛɪᴠᴏ", rowId: `${usedPrefix}estado`},
       {title: "ɢʀᴜᴘᴏs", description: "ǫᴜᴇ ᴍᴜᴇsᴛʀᴀ ʟᴏs ɢʀᴜᴘᴏs ᴏғɪᴄɪᴀʟᴇs ᴅᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}grupos`},
