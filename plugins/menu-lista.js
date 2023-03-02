@@ -1,4 +1,5 @@
-import moment from 'moment-timezone'
+import { xpRange } from '../lib/levelling.js'
+const { levelling } = '../lib/levelling.js'
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
 let locale = 'es'
 let d = new Date(new Date + 3600000)
@@ -7,41 +8,32 @@ let time = d.toLocaleTimeString(locale, {
       minute: 'numeric',
       second: 'numeric'
     }) 
+let _uptime = process.uptime() * 1000
+let uptime = clockString(_uptime) 
+let totalreg = Object.keys(global.db.data.users).length
+let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
 
 let pp = '.media/menu2.jpg'
 let user = global.db.data.users[m.sender]
 let { money, joincount } = global.db.data.users[m.sender]
 let { exp, diamond, registered, self, level, role } = global.db.data.users[m.sender]
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
+let name = await conn.getName(m.sender)
 let week = d.toLocaleDateString(locale, { weekday: 'long' })
 let date = d.toLocaleDateString(locale, {
 day: 'numeric',
 month: 'long',
 year: 'numeric'
 }) 
-let _uptime = process.uptime() * 1000
-let uptime = clockString(_uptime) 
-
-
-const sections = [  
+ 
+const sections = [
 {
-title: `🄳🄰🄱🄸-🄱🄾🅃 ✨ sᴇʟᴇᴄᴄɪᴏɴᴇs ᴀǫᴜɪ`,
+title: `𝗟𝗜𝗦𝗧𝗔 𝗗𝗘 𝗠𝗘𝗡𝗨𝗦`,
 rows: [
-        {title: "ɪɴғᴏ", description: "ᴘᴀʀᴀ ᴠᴇᴢ ᴇʟ ᴄᴜᴀɴᴛᴏs ɢʀᴜᴘᴏs ᴇsᴛᴀ ᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}grouplist`},
-        {title: "ᴄʀᴇᴀᴅᴏʀ", description: "ɴᴜᴍᴇʀᴏ ᴅᴇʟ ᴄʀᴇᴀᴅᴏʀ", rowId: `${usedPrefix}owner`},
-        {title: "ᴍᴇɴᴜᴄᴏᴍᴘʟᴇᴛᴏ", description: "ᴘᴀʀᴀ ᴠᴇᴢ ᴛᴏᴅᴀ ʟᴀs ғᴜɴᴄɪᴏɴᴇs ᴅᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}menucompleto`},
-      {title: "ᴇsᴛᴀᴅᴏ", description: "ᴘᴀʀᴀ sᴀʙᴇʀ sɪ ᴇʟ ʙᴏᴛ ᴇsᴛᴀ ᴀᴄᴛɪᴠᴏ", rowId: `${usedPrefix}estado`},
-      {title: "ɢʀᴜᴘᴏs", description: "ǫᴜᴇ ᴍᴜᴇsᴛʀᴀ ʟᴏs ɢʀᴜᴘᴏs ᴏғɪᴄɪᴀʟᴇs ᴅᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}grupos`},
-      {title: "ᴘɪɴɢ", description: "ᴍᴜᴇsᴛᴀ ʟᴀs ᴠᴇʟᴏᴄɪᴅᴀᴅ ᴅᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}ping`},
-      {title: "ᴇɴᴀʙʟᴇ", description: "ᴘᴀʀᴀ ᴀᴄᴛɪᴠᴀ ᴏ ᴅᴇsᴀᴄᴛɪᴠᴀʀ ᴇsᴛᴀ ᴏᴘᴄɪᴏɴᴇs", rowId: `${usedPrefix}enable`},
-      {title: "ʜɪᴅᴇᴛᴀɢ", description: "ᴘᴀʀᴀ ᴍᴇɴᴄɪᴏɴᴀʀ ᴀ ᴛᴏᴅᴏs ᴄᴏɴ ᴜɴ ᴛᴇxᴛᴏ", rowId: `${usedPrefix}hidetag`},
-      {title: "ᴛᴀɢᴀʟʟ", description: "ᴘᴀʀᴀ ᴍᴇɴᴄɪᴏɴᴀʀ ᴀ ᴛᴏᴅᴏs ᴇɴ ᴜɴᴀ ʟɪsᴛᴀ", rowId: `${usedPrefix}tagall`},
-      {title: "ᴅᴇʟ", description: "ᴘᴀʀᴀ ᴇʟɪᴍɪɴᴀʀ ᴜɴ ᴍᴇɴsᴀᴊᴇ", rowId: `${usedPrefix}del`},
-              {title: "ᴡᴏʀᴋ", description: "ᴛʀᴀʙᴀᴊᴀ ʏ ɢᴀɴᴀs ᴇxᴘᴇʀɪᴇɴᴄɪᴀ xᴘ", rowId: `${usedPrefix}work`},
-]}, ]
-let name = await conn.getName(m.sender)
+     {title: "👑 𝗖𝗥𝗘𝗔𝗗𝗢𝗥 👑", description: '𝗖𝗢𝗡𝗧𝗔𝗖𝗧𝗢 𝗗𝗘𝗟 𝗖𝗥𝗘𝗔𝗗𝗢𝗥', rowId: `${usedPrefix}creador`},
+     ]}, ] 
 const listMessage = {
-text: `~ HOLA ${taguser}*`, footer: `
+text: `*ミ💖 𝗛𝗢𝗟𝗔 _${name}_ 💖彡*
 ┏  「     •🌐•     」 ┓
 ┃📡 ʙɪᴇɴᴠᴇɴɪᴅᴏ ᴀʟ ᴍᴇɴᴜ ʟɪsᴛᴀ
 ┃◤━━━━━ ☆. ∆ .☆ ━━━━━◥
@@ -61,9 +53,9 @@ text: `~ HOLA ${taguser}*`, footer: `
 ┃➲ 💎 ᴅɪᴀᴍᴀɴᴛᴇs: ${diamond}
 ┃➲ 🧰 ᴇxᴘᴇʀɪᴇɴᴄɪᴀ: ${exp}
 ┗─━─━「 🌎 」━─━─┛
-*🄳🄰🄱🄸-🄱🄾🅃✨*`, pp,
+*🄳🄰🄱🄸-🄱🄾🅃 ✨*`, pp,
 title: null,
-buttonText: "🅗🅐🅖🅐 🅒🅛🅘🅒🅚 🅐🅠🅤🅘", 
+buttonText: "⍟𝙃𝘼𝙂𝘼 𝘾𝙇𝙄𝘾𝙆 𝘼𝙌𝙐𝙄⍟", 
 sections }
 
 conn.sendMessage(m.chat, listMessage)
@@ -101,4 +93,4 @@ function ucapan() {
     res = `𝙱𝚄𝙴𝙽𝙰𝚂 𝙽𝙾𝙲𝙷𝙴𝚂 | 𝙶𝙾𝙾𝙳 𝙽𝙸𝙶𝚃𝙷`
   }
   return res
-} 
+}
