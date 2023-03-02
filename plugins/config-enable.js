@@ -201,20 +201,12 @@ const listMessage = {
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, listMessage, { quoted: m })
       throw false
   }
-    conn.sendButton(m.chat, `
-⊜ *OPCIONES*
-┏━━━━━━━━━━━⬣
-┃❏ 🗂️ *Tipo:* ${type} 
-┃❏ 💠 *Estado:* ${isEnable ? 'Activo ✅' : 'Desactivado 🔴'}
-┃❏ 🔅 *Para:* ${isAll ? 'Este bot' : isUser ? '' : 'Este chat'}
-┗━━━━━━━━━━━⬣
-`,ignyc, null, [[`${isEnable ? '🔴 Desactivar' : '✅ Activar'}`, `${isEnable ? `${usedPrefix}off ${type}` : `${usedPrefix}on ${type}`}`], ['Menú ✨', `${usedPrefix}help`]],m)
-}
     
-/*m.reply(`
+
+    
+m.reply(`
 ✅ *${type}* Se *${isEnable ? 'Activó' : 'Desactivó'}* ${isAll ? 'para este bot' : isUser ? '' : 'para este chat'}
-`.trim()) 
-*/
+`.trim())
 
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
