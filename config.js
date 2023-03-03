@@ -60,7 +60,7 @@ global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', 
 
 // Sticker WM
 global.packname = '👑 ❑ Owner:\n📅 ❑ Día:\n🕒 ❑ Hora:\n🗓️ ❑ Fecha:\n🔥 ❑ By:'
-global.author = 'DabiBot-MD'
+global.author = 'DabiBot-MD \n▸ ${dia}\n▸ ${tiempo}\n▸ ${fecha}\n▸ ${botname}'
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
