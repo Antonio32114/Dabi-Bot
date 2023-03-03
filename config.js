@@ -56,11 +56,29 @@ global.mes = d.toLocaleDateString('es', { month: 'long' })
 global.año = d.toLocaleDateString('es', { year: 'numeric' })
 global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
 
+
+
+global.stime = function clockString(seconds) {
+  var d = Math.floor(seconds / (1000 * 60 * 60 * 24));
+  var h = Math.floor((seconds / (1000 * 60 * 60)) % 24);
+  var m = Math.floor((seconds / (1000 * 60)) % 60);
+  var s = Math.floor((seconds / 1000) % 60);
+  var dDisplay = d > 0 ? d + (d == 1 ? " dia," : " Dias,") : "";
+  var hDisplay = h > 0 ? h + (h == 1 ? " hora, " : " Horas, ") : "";
+  var mDisplay = m > 0 ? m + (m == 1 ? " minuto, " : " Minutos, ") : "";
+  var sDisplay = s > 0 ? s + (s == 1 ? " segundo" : " Segundos") : "";
+  return dDisplay + hDisplay + mDisplay + sDisplay ? dDisplay + hDisplay + mDisplay + sDisplay : '0 Segundos'
+};
+
+var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'una linda noche 🌙'; break; case 1: hour = 'una linda noche 💤'; break; case 2: hour = 'una linda noche 🦉'; break; case 3: hour = 'una linda mañana ✨'; break; case 4: hour = 'una linda mañana 💫'; break; case 5: hour = 'una linda mañana 🌅'; break; case 6: hour = 'una linda mañana 🌄'; break; case 7: hour = 'una linda mañana 🌅'; break; case 8: hour = 'una linda mañana 💫'; break; case 9: hour = 'una linda mañana ✨'; break; case 10: hour = 'un lindo dia 🌞'; break; case 11: hour = 'un lindo dia 🌨'; break; case 12: hour = 'un lindo dia ❄'; break; case 13: hour = 'un lindo dia 🌤'; break; case 14: hour = 'una linda tarde 🌇'; break; case 15: hour = 'una linda tarde 🥀'; break; case 16: hour = 'una linda tarde 🌹'; break; case 17: hour = 'una linda tarde 🌆'; break; case 18: hour = 'una linda noche 🌙'; break; case 19: hour = 'una linda noche 🌃'; break; case 20: hour = 'una linda noche 🌌'; break; case 21: hour = 'una linda noche 🌃'; break; case 22: hour = 'una linda noche 🌙'; break; case 23: hour = 'una linda noche 🌃'; break;}
+  global.saludo = "Espero que tengas " + hour;
+
+
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 // Sticker WM
 global.packname = '👑 ❑ Owner:\n📅 ❑ Día:\n🕒 ❑ Hora:\n🗓️ ❑ Fecha:\n🔥 ❑ By:'
-global.author = 'DabiBot-MD \n▸ ${dia}\n▸ ${tiempo}\n▸ ${fecha}\n▸ ${botname}'
+global.author = '𝜟𝚴𝚻𝚯͢𝚴𝐈𝚯͢ \n▸ ${dia}\n▸ ${tiempo}\n▸ ${fecha}\n▸ ${botname}'
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
