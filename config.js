@@ -87,8 +87,8 @@ global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 // Sticker WM
-global.packname = '👑 ❑ Owner:\n📅 ❑ Día:\n🕒 ❑ Hora:\n🗓️ ❑ Fecha:\n🔥 ❑ By:'
-global.author = '▸ 𝙰𝚗𝚝𝚘𝚗𝚒𝚘\n▸ ${dia}\n▸ ${tiempo}\n▸ ${fecha}\n▸ ${botname}'
+global.packname = `👑 ❑ Owner:\n📅 ❑ Día:\n🕒 ❑ Hora:\n🗓️ ❑ Fecha:\n🔥 ❑ By:`
+global.author = `▸ 𝙰𝚗𝚝𝚘𝚗𝚒𝚘\n▸ ${dia}\n▸ ${tiempo}\n▸ ${fecha}\n▸ ${botname}`
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 global.fgig = 'https://github.com/Antonio32114/Dabi-Bot'
