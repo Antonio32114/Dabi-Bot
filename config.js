@@ -3,7 +3,7 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 
 global.owner = [
-  ['50763596565', '𝜟𝚴𝚻𝚯͢𝚴𝐈𝚯͢', true],
+  ['50763596565', '𝙰𝚗𝚝𝚘𝚗𝚒𝚘', true],
   ['687712111', '𓏲⊹ ⌑፮』ᴅɪ֟፝ɴᴏ͢ㆍᶽ༐ 𓈃𓍯', true],
   ['5492266466080']
 ] //Numeros de owner 
@@ -87,8 +87,8 @@ global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 // Sticker WM
-global.packname = `👑 ❑ Owner:\n📅 ❑ Día:\n🕒 ❑ Hora:\n🗓️ ❑ Fecha:\n🔥 ❑ By:`
-global.author = `▸ 𝜟𝚴𝚻𝚯͢𝚴𝐈𝚯͢\n▸ ${dia}\n▸ ${tiempo}\n▸ ${fecha}\n▸ ${botname}`
+global.packname = '👑 ❑ Owner:\n📅 ❑ Día:\n🕒 ❑ Hora:\n🗓️ ❑ Fecha:\n🔥 ❑ By:'
+global.author = '▸ 𝙰𝚗𝚝𝚘𝚗𝚒𝚘\n▸ ${dia}\n▸ ${tiempo}\n▸ ${fecha}\n▸ ${botname}'
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 global.fgig = 'https://github.com/Antonio32114/Dabi-Bot'
