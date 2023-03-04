@@ -75,7 +75,6 @@ var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'u
 
 
 
-//᭥🕒᭢━━━━━━◜𝑻𝑰𝑬𝑴𝑷𝑶◞━━━━━━᭥🕒᭢
 global.d = new Date(new Date + 3600000)
 global.locale = 'es'
 global.dia = d.toLocaleDateString(locale, { weekday: 'long' })
@@ -83,7 +82,6 @@ global.fecha = d.toLocaleDateString('es', { day: 'numeric', month: 'numeric', ye
 global.mes = d.toLocaleDateString('es', { month: 'long' })
 global.año = d.toLocaleDateString('es', { year: 'numeric' })
 global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
-//╰─────────────────────╯
 
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
