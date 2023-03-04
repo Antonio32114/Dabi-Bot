@@ -77,8 +77,8 @@ var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'u
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 // Sticker WM
-global.packname = '👑 ❑ Owner:\n📅 ❑ Día:\n🕒 ❑ Hora:\n🗓️ ❑ Fecha:\n🔥 ❑ By:'
-global.author = '𝜟𝚴𝚻𝚯͢𝚴𝐈𝚯͢ \n▸ ${dia}\n▸ ${tiempo}\n▸ ${fecha}\n▸ ${botname}'
+global.packname = 'DABIBOT-MD'
+global.author = 'DABIBOT-MD '
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
