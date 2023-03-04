@@ -74,12 +74,23 @@ var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'u
   global.saludo = "Espero que tengas " + hour;
 
 
+
+//᭥🕒᭢━━━━━━◜𝑻𝑰𝑬𝑴𝑷𝑶◞━━━━━━᭥🕒᭢
+global.d = new Date(new Date + 3600000)
+global.locale = 'es'
+global.dia = d.toLocaleDateString(locale, { weekday: 'long' })
+global.fecha = d.toLocaleDateString('es', { day: 'numeric', month: 'numeric', year: 'numeric' })
+global.mes = d.toLocaleDateString('es', { month: 'long' })
+global.año = d.toLocaleDateString('es', { year: 'numeric' })
+global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
+//╰─────────────────────╯
+
+
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 // Sticker WM
-global.packname = 'DABIBOT-MD'
-global.author = 'DABIBOT-MD '
-
+global.packname = `👑 ❑ Owner:\n📅 ❑ Día:\n🕒 ❑ Hora:\n🗓️ ❑ Fecha:\n🔥 ❑ By:`
+global.author = `𝜟𝚴𝚻𝚯͢𝚴𝐈𝚯͢\n${day}\n${time}\n${fecha}\n${wm}`
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 global.fgig = 'https://github.com/Antonio32114/Dabi-Bot'
