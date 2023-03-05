@@ -14,7 +14,7 @@ switch (type) {
 
 case 'ass':
 case 'culos':
-    let as = await (await fetch(global.API('fgmods', '/api/nsfw/ass', { }, 'apikey'))).json() 
+    let as = await (await fetch(global.API('fgmods', 'https://konachan.com/image/5d61536e7b89bcf6f4c98206683da347/Konachan.com%20-%20290987%202girls%20aconitea%20bed%20black_hair%20cunnilingus%20game_cg%20gray_hair%20il_shi%20koichi_ai%20long_hair%20navel%20nude%20pussy%20shirt_lift%20short_hair%20uncensored%20yuri.png', { }, 'apikey'))).json() 
     conn.sendButton(m.chat, `🥵 Random *${command}*`, fgyt, as.result, [['▷▷ sɪɢᴜɪᴇɴᴛᴇ', `${usedPrefix + command}`]], m)
    m.react(xmoji) 
 break
