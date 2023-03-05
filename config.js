@@ -87,6 +87,8 @@ global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 // Sticker WM
+global.wm = '🄳🄰🄱🄸-🄱🄾🅃'
+
 global.packname = `👑 ❑ Owner:\n📅 ❑ Día:\n🕒 ❑ Hora:\n🗓️ ❑ Fecha:\n🔥 ❑ By:`
 global.author = `▸ 𝙰𝚗𝚝𝚘𝚗𝚒𝚘\n▸ ${dia}\n▸ ${tiempo}\n▸ ${fecha}\n▸ ${wm}`
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
@@ -115,7 +117,6 @@ global.maxwarn = '4' // máxima advertencias
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-global.wm = '🄳🄰🄱🄸-🄱🄾🅃'
 global.wait = '*⌛ _Cargando, aguarde un momento..._ ▬▬▬▭*'
 global.rwait = '⌛'
 global.dmoji = '🤭'
