@@ -490,7 +490,7 @@ export async function participantsUpdate({ id, participants, action }) {
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝚂𝙸𝙽 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽*') :
                               (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
                         
-this.sendButton(id, text, groupMetadata.subject, apii.data, [[(action == 'add' ? 'ʙɪᴇɴᴠᴇɴɪᴅᴏ 👋' : ' ᴀᴅɪᴏs 🚮'), (action == 'add' ? '#welcomegc' : '#byegc')], ['🛑 ᴍᴇɴᴜ 🛑', `#menu`]], null, {mentions: this.parseMention(text)})
+this.sendButton(id, text, groupMetadata.subject, apii.data, [[(action == 'add' ? 'ʙɪᴇɴᴠᴇɴɪᴅᴏ 👋' : ' ᴀᴅɪᴏs 🚮'), (action == 'add' ? '.ok' : '.llorar')], ['🛑 ᴍᴇɴᴜ 🛑', `#menu`]], null, {mentions: this.parseMention(text)})
                 
  //this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] }) 
                    }
@@ -529,6 +529,23 @@ export async function groupsUpdate(groupsUpdate) {
         if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || conn.sRevoke || 'El enlace del grupo cambia a\n@revoke').replace('@revoke', groupUpdate.revoke)
         if (!text) continue
         await this.sendMessage(id, { text, mentions: this.parseMention(text) })
+    }
+}
+
+export async function callUpdate(callUpdate) {
+    let isAnticall = global.db.data.settings[this.user.jid].antiCall
+    if (!isAnticall) return
+    for (let nk of callUpdate) {
+    if (nk.isGroup == false) {
+    if (nk.status == "offer") {
+    let callmsg = await this.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, las ${nk.isVideo ? 'videollamadas' : 'llamadas'} no están permitidas, serás bloqueado.\n-\nSi accidentalmente llamaste póngase en contacto con mi creador para que te desbloquee!`, false, { mentions: [nk.from] })
+    //let data = global.owner.filter(([id, isCreator]) => id && isCreator)
+    //await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
+    let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑;;;\nFN:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nORG:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nTITLE:\nitem1.TEL;waid=5219992095479:+521 999 209 5479\nitem1.X-ABLabel:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nEND:VCARD`
+    await this.sendMessage(nk.from, { contacts: { displayName: '𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑', contacts: [{ vcard }] }}, {quoted: callmsg})
+    await this.updateBlockStatus(nk.from, 'block')
+    }
+    }
     }
 }
 
@@ -578,7 +595,7 @@ global.dfail = (type, m, conn) => {
         unreg: '🔴ʜᴇʏ ᴀʟᴛᴏ ɴᴏ ᴇsᴛᴀ ʀᴇɢɪsᴛʀᴀᴅᴏ 🔴\nᴘᴀʀᴀ ᴘᴏᴅᴇʀ ᴜsᴀʀ ᴇʟ ʙᴏᴛ ɴᴇᴄᴇsɪᴛᴀ ʀᴇɢɪsᴛʀᴀʀᴛᴇ:\n\n*/reg nombre.edad*',
         restrict: '🔐 ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ᴇsᴛᴀ ᴅᴇsᴀᴄᴛɪᴠᴀᴅᴏ'
     }[type]
-    if (msg) return conn.sendButton(m.chat, msg, wm, null, [['OK', 'ok'] ], m)
+    if (msg) return conn.sendButton(m.chat, msg, wm, null, [['OK', '.ok'] ], m)
 }
 
 let file = global.__filename(import.meta.url, true)
