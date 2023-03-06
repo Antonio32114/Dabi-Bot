@@ -171,7 +171,14 @@ const listMessage = {
       }
       bot.restrict = isEnable
       break
-    
+    case 'modejadibot':
+isAll = true
+if (!isROwner) {
+global.dfail('rowner', m, conn)
+throw false
+}
+bot.modejadibot = isEnable
+break        
     case 'onlypv':
     case 'onlydm':
     case 'onlymd':
