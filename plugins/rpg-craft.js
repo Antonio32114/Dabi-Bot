@@ -53,13 +53,13 @@ let lgocraft = `
 `
 const sections = [
    {
-	title: "CRAFT A TOOLS",
+	title: "CREAR HERRAMIENTAS",
 	rows: [
-	    {title: "SWORD ⚔️", rowId: ".craft sword", description: "Crafting A Sword"},
-	    {title: "PICKAXE ⛏️", rowId: ".craft pickaxe", description: "Crafting A Pickaxe"},
-	    {title: "FISHINGROD 🎣", rowId: ".craft fishingrod", description: "Crafting A Fishingrod"},
-	    {title: "ARMOR 🥼", rowId: ".craft armor", description: "Crafting A Armor"},
-	    {title: "ATM 💳", rowId: ".craft atm", description: "Crafting A Atm (but that's ilegal)"},
+	    {title: "ESPADA ⚔️", rowId: ".craft sword", description: "Hacer una espada"},
+	    {title: "PICO ⛏️", rowId: ".craft pickaxe", description: "Fabricación de un pico"},
+	    {title: "CAÑA DE PESCAR 🎣", rowId: ".craft fishingrod", description: "Hacer una caña de pescar"},
+	    {title: "ARMADURA 🥼", rowId: ".craft armor", description: "Fabricación de una armadura"},
+	    {title: "Cajero automático 💳", rowId: ".craft atm", description: "Fabricando un cajero automático (pero eso es ilegal))"},
 	]
     },
 ]
