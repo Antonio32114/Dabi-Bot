@@ -26,9 +26,9 @@ let handler = async(m, { conn, usedPrefix, command, text }) => {
         return conn.reply(m.chat, lmao, false, { quoted: m} )// nak durung menuhi syarat
     }
     global.dungeon = global.dungeon ? global.dungeon : {}
-    if (Object.values(global.dungeon).find(room => room.id.startsWith('dungeon') && [room.game.player1, room.game.player2, room.game.player3, room.game.player4].includes(m.sender))) return m.reply('Kamu masih di dalam Dungeon') // nek iseh neng njero dungeon
+    if (Object.values(global.dungeon).find(room => room.id.startsWith('dungeon') && [room.game.player1, room.game.player2, room.game.player3, room.game.player4].includes(m.sender))) return m.reply('Todavía estás en el Dungeon'') // nek iseh neng njero dungeon
     let timing = (new Date - (user.lastdungeon * 1)) * 1
-    if (timing < 600000) return conn.sendButton(m.chat, `*cOOLDOWN*`, `ʏᴏᴜ ʜᴀᴠᴇ ɢᴏɴᴇ ᴛᴏ ᴛʜᴇ ᴅᴜɴɢᴇᴏɴ, please wait...\n➞ ${clockString(600000 - timing)}`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv']],m) // Cooldown
+    if (timing < 600000) return conn.sendButton(m.chat, `*cOOLDOWN*`, `𝚃𝚎 𝙷𝚊𝚜 𝙸𝚍𝚘 𝙷𝚊𝚌𝚒𝚊 𝙼𝚊𝚣𝚖𝚘𝚛𝚛𝚊𝚜, 𝙴𝚜𝚙𝚎𝚛𝚎 𝙿𝚘𝚛 𝙵𝚊𝚟𝚘𝚛a...\n➞ ${clockString(600000 - timing)}`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv']],m) // Cooldown
     let room = Object.values(global.dungeon).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
     if (room) {
 
