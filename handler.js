@@ -896,8 +896,6 @@ export async function handler(chatUpdate) {
             if (typeof chat !== 'object')
                 global.db.data.chats[m.chat] = {}
             if (chat) {
-            if (!isNumber(user.afk))
-                    user.afk = -1
                 if (!('afkReason' in user))
                     user.afkReason = ''
                 if (!('banned' in user))
