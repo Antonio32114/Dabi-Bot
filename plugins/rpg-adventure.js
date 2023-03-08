@@ -10,13 +10,13 @@ and type *${usedPrefix}heal <quantity>* to use potions
 ¡¡Ya eres aventura!!, por favor espera *🕐${timers.toTimeString()}*
 `.trim())
     const rewards = reward(user)
-    let text = 'you\'ve been adventure and lost'
+    let text = 'Has estado en la aventura y perdido'
     for (const lost in rewards.lost) if (user[lost]) {
         const total = rewards.lost[lost].getRandom()
         user[lost] -= total * 1
         if (total) text += `\n*${global.rpg.emoticon(lost)}${lost}:* ${total}`
     }
-    text += '\n\nBut you got'
+    text += '\n\npero tienes'
     for (const rewardItem in rewards.reward) if (rewardItem in user) {
         const total = rewards.reward[rewardItem].getRandom()
         user[rewardItem] += total * 1
