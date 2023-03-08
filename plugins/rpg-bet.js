@@ -2,18 +2,18 @@ let confirm = {}
 
 async function handler(m, { conn, args }) {
     //if (!isROwner) throw 'Dalam perbaikan'
-    if (m.sender in confirm) throw 'Kamu masih melakukan judi, tunggu sampai selesai!!'
+    if (m.sender in confirm) throw 'Todavía estás apostando, espera a que termine!!'
     try {
         let user = global.db.data.users[m.sender]
         let count = (args[0] && number(parseInt(args[0])) ? Math.max(parseInt(args[0]), 1) : /all/i.test(args[0]) ? Math.floor(parseInt(user.money)) : 1) * 1
-        if ((user.money * 1) < count) return m.reply('💹 Uang kamu tidak cukup!!')
+        if ((user.money * 1) < count) return m.reply('💹 Tu dinero no es suficiente!!')
         if (!(m.sender in confirm)) {
             confirm[m.sender] = {
                 sender: m.sender,
                 count,
                 timeout: setTimeout(() => (m.reply('timed out'), delete confirm[m.sender]), 60000)
             }
-            let txt = `Apakah anda yakin mau melakukan judi (Y/n)\n\n*Taruhan:* ${count} 💹\n⏰ 60s Timeout`
+            let txt = `Apakah anda yakin mau melakukan judi (Y/n)\n\n*Taruhan:* ${count} 💹\n⏰ 60s Tiempo de espera`
             return conn.sendButton(m.chat, txt, author, null, [['✔️'], ['✖️']], m)
         }
     } catch (e) {
