@@ -479,6 +479,18 @@ export async function handler(chatUpdate) {
                 if (!user.rtrofi) user.rtrofi = 'Bronce'
             } else
                 global.db.data.users[m.sender] = {
+                    exp: 0,
+                    diamond: 20,
+                    lastclaim: 0,
+                    registered: false,
+                    name: m.name,
+                    age: -1,
+                    regTime: -1,
+                    afk: -1,
+                    afkReason: '',
+                    banned: false,
+                    warn: 0,
+                    level: 0,
 		            afk: -1,
                     afkReason: '',
                     age: -1,
