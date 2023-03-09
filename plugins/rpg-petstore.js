@@ -13,42 +13,43 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   let hpetfood = 950
 
 let caption = `
-🐈 • *ᴄᴀᴛ:* 
-➞ ${hcat} ᴘᴇᴛ ᴛᴏᴋᴇɴ🔖
+🐈 • *mascota: GATO | CAT:* 
+➞ ${hcat} de ᴛᴏᴋᴇɴ🔖
 
-🐕 • *ᴅᴏɢ:*
-➞ ${hdog} ᴘᴇᴛ ᴛᴏᴋᴇɴ🔖
+🐕 • *PERRO | ᴅᴏɢ:*
+➞ ${hdog} de ᴛᴏᴋᴇɴ🔖
 
-🐎 • *ʜᴏʀsᴇ:* 
-➞ ${hhorse} ᴘᴇᴛ ᴛᴏᴋᴇɴ🔖
+🐎 • *CABALLO | ʜᴏʀsᴇ:* 
+➞ ${hhorse} de ᴛᴏᴋᴇɴ🔖
 
-🦊 • *ғᴏx:* 
-➞ ${hfox} ᴘᴇᴛ ᴛᴏᴋᴇɴ🔖
+🦊 • *ZORRO | ғᴏx:* 
+➞ ${hfox} de ᴛᴏᴋᴇɴ🔖
 
-🍖 • *ᴘᴇᴛ ғᴏᴏᴅ:*
+🍖 • *alimentos para mascotas:*
 ➞ ${hpetfood} ᴍᴏɴᴇʏ 💹
 
 - - - - - - - - - - - - - - - - - - - - -
 
 ABILITY
-➞ 🐈 • ᴄᴀᴛ :
-- ɪɴᴄʀᴇᴀsᴇ ʜᴇᴀʟᴛʜ 5% / ʟᴇᴠᴇʟ ᴡʜᴇɴ ᴜsᴇ *.ʜᴇᴀʟ*
+➞ 🐈 • Gato | ᴄᴀᴛ :
+- aumentar la salud  5% / ʟᴇᴠᴇʟ cuando se usa *.ʜᴇᴀʟ*
 
-➞ 🐕 • ᴅᴏɢ :
-- ᴄᴏᴍɪɴɢ sᴏᴏɴ...
+➞ 🐕 • perro | ᴅᴏɢ :
+- muy pronto...
 
-➞ 🐎 • ʜᴏʀsᴇ :
-- ᴄᴏᴍɪɴɢ sᴏᴏɴ...
 
-➞ 🦊 • ғᴏx :
-- ᴄᴏᴍɪɴɢ sᴏᴏɴ...
+➞ 🐎 • caballo | ʜᴏʀsᴇ :
+- muy pronto ...
+
+➞ 🦊 • zorro | fᴏx :
+- muy pronto ...
 `
 const sections = [
    {
-	title: "- ᴘ ᴇ ᴛ  s ᴛ ᴏ ʀ ᴇ -",
+	title: "- TIENDA DE MASCOTA -",
 	rows: [
-	    {title: "🐈 • ᴄᴀᴛ", rowId: ".petshop cat"},
-	    {title: "🐕 • ᴅᴏɢ", rowId: ".petshop dog"},
+	    {title: "🐈 • Gata", rowId: ".petshop cat"},
+	    {title: "🐕 • perro", rowId: ".petshop dog"},
 	    {title: "🐎 • ʜᴏʀsᴇ", rowId: ".petshop horse"},
 	    {title: "🦊 • ғᴏx", rowId: ".petshop fox"},
 	    {title: "🍖 • ᴘᴇᴛ ғᴏᴏᴅ", rowId: ".petshop petfood"},
