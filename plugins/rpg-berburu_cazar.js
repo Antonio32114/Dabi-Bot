@@ -76,7 +76,7 @@ if (new Date - global.db.data.users[m.sender].lastberburu < 2700000) return conn
 [`🎒 𝙸𝙽𝚅𝙴𝙽𝚃𝙰𝙴𝚁𝙸𝙾`, `.inventario`]], m)	
 
 setTimeout(() => {
-conn.sendHydrated(m.chat, hsl, wm, null, yt, `𝙶𝙸𝚃𝙷𝚄𝙱`, null, null, [
+conn.sendHydrated(m.chat, hsl, wm, null, fgig, `𝙶𝙸𝚃𝙷𝚄𝙱`, null, null, [
 [null, null]], null)}, 20000)
 	        
 setTimeout(() => {
