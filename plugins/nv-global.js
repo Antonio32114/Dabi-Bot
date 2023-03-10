@@ -7,10 +7,10 @@ if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.
 let join = `*< ðš„ð™½ð™´ ðš„ð™½ ð™±ð™¾ðšƒ ð™° ðšƒðš„ ð™¶ðšðš„ð™¿ð™¾ />*\n\n*ð™·ð™¾ð™»ð™° ðš„ðš‚ðš„ð™°ðšð™¸ð™¾/ð™°*\n*ð™¿ð™°ðšð™° ðš‚ð™¾ð™»ð™¸ð™²ð™¸ðšƒð™°ðš ðš„ð™½ ð™±ð™¾ðšƒ ð™° ðšƒðš„ ð™¶ðšðš„ð™¿ð™¾ ðš„ðš‚ð™° ð™´ð™» ð™²ð™¾ð™¼ð™°ð™½ð™³ð™¾ #join ð™¼ð™°ðš‚ ð™´ð™» ð™´ð™½ð™»ð™°ð™²ð™´ ð™³ð™´ ðšƒðš„ ð™¶ðšðš„ð™¿ð™¾*\n\n*â€”â—‰ ð™´ð™¹ð™´ð™¼ð™¿ð™»ð™¾:*\n*â—? #join* https://chat.whatsapp.com/FWmPWnVqpiQ4XNpLN98g3G`.trim() 
 this.sendHydrated(m.chat, join, wm, imagen4, 'https://www.paypal.me/TheShadowBrokers133', 'ð™¿ð™°ðšˆð™¿ð™°ð™»', null, null, [[null, null]], m)}    
     
-if (/^hola$/i.test(m.text) && chat.audios && !chat.isBanned) {
+if (chat.audios && m.text.match(/(hola|hello|Hola)/gi)) {    
 let vn = './media/Hola.mp3'
 this.sendPresenceUpdate('recording', m.chat)   
-this.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted: m })}    
+this.sendFile(m.chat, vn, 'error.mp3', null, m, true, {type: 'audioMessage', ptt: true})}   
     
 
 if (!chat.isBanned && chat.audios && m.text.match(/(anadieleimporta|a nadie le importa)/gi)) {
