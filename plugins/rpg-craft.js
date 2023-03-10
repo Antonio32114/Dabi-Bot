@@ -85,7 +85,7 @@ const listMessage = {
             global.db.data.users[m.sender].string -= 20
             global.db.data.users[m.sender].pickaxe += 1
             user.pickaxedurability = 40
-            m.reply("Sukses membuat 1 pickaxe 🔨")
+            m.reply("Éxito hecho 1 pico 🔨")
             break
           case 'sword':
           if (user.sword > 0) return m.reply('Kamu sudah memilik ini')
@@ -94,7 +94,7 @@ const listMessage = {
             global.db.data.users[m.sender].iron -= 15
             global.db.data.users[m.sender].sword += 1
             user.sworddurability = 40
-            m.reply("Sukses membuat 1 sword 🗡️")
+            m.reply("Éxito hecho 1 espada 🗡️")
             break
           case 'fishingrod':
           if (user.fishingrod > 0) return m.reply('Kamu sudah memilik ini')
@@ -104,7 +104,7 @@ const listMessage = {
             global.db.data.users[m.sender].string -= 20
             global.db.data.users[m.sender].fishingrod += 1
             user.fishingroddurability = 40
-            m.reply("Sukses membuat 1 Pancingan 🎣")
+            m.reply("Éxito hecho 1 caña de pescar 🎣")
             break
           case 'armor':
           if (user.armor > 0) return m.reply('Kamu sudah memilik ini')
@@ -114,7 +114,7 @@ const listMessage = {
             global.db.data.users[m.sender].diamond -= 5
             global.db.data.users[m.sender].armor += 1
             user.armordurability = 50
-            m.reply("Sukses membuat 1 Armor 🥼")
+            m.reply("Fabricación exitosa de 1 armadura 🥼")
             break
             case 'atm':
           if (user.atm > 0) return m.reply('Kamu sudah memilik ini')
@@ -124,7 +124,7 @@ const listMessage = {
             global.db.data.users[m.sender].diamond -= 6
             global.db.data.users[m.sender].atm += 1
             global.db.data.users[m.sender].fullatm = 5000000
-            m.reply("Sukses membuat 1 Atm 💳")
+            m.reply("El éxito hace 1 Atm 💳")
             break
 
           default:
