@@ -87,7 +87,7 @@ global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 // Sticker WM
-global.wm = '🄳🄰🄱🄸-🄱🄾🅃'
+global.wm = '⚘݄𖠵⃕⁖𖥔͢𝐊𝐢𝐥𝐥𝐮𝐚ꪶ͢𝑩𝒐𝒕⋆᭄͙̈'
 
 global.packname = `👑 ❑ Owner:\n📅 ❑ Día:\n🕒 ❑ Hora:\n🗓️ ❑ Fecha:\n🔥 ❑ By:`
 global.author = `▸ 𝙰𝚗𝚝𝚘𝚗𝚒𝚘\n▸ ${dia}\n▸ ${tiempo}\n▸ ${fecha}\n▸ ${wm}`
@@ -103,7 +103,7 @@ global.faceb = 'https://facebook.com/groups/872989990425789/'
 
 global.vs = '1.5.0'
 
-global.lb = '🄳🄰🄱🄸-🄱🄾🅃'
+global.lb = '⚘݄𖠵⃕⁖𖥔͢𝐊𝐢𝐥𝐥𝐮𝐚ꪶ͢𝑩𝒐𝒕⋆᭄͙̈'
 global.lolibot = lb
 
 global.dygp = 'https://chat.whatsapp.com/HZmxLIsZRbYE37xRV9XQYU' //grupo del bot
